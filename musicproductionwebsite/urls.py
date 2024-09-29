@@ -16,6 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.views.debug import default_urlconf
+path('', default_urlconf)
 
 urlpatterns = [
     path("", include("website.urls")),
